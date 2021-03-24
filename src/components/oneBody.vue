@@ -10,10 +10,7 @@
         </div>
       </form>
       <div class='onebody-left' id='onebody-left-gsap'>
-        <img class='onebody-image'
-          src='@/assets/image/p2.jpg'
-          alt='圖二'
-        />
+        <div class="onebody-image"></div>
       </div>
       <div class='onebody-right'>
         <div class='onebody-nav'>
@@ -39,7 +36,7 @@ export default {
         toggleActions: 'restart none none none'
       },
       x: 50,
-      duration: 1
+      duration: 2
     })
     this.$gsap.to('#onebody-title-gsap', {
       scrollTrigger: {

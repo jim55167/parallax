@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="str-right">
-        <img class="str-image" src="@/assets/image/p3.jpg" alt="圖三"/>
+        <div class="str-image"></div>
       </div>
     </div>
   </div>
