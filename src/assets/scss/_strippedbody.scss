@@ -1,0 +1,77 @@
+.str-body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  
+  .read-more {
+    position: absolute;
+    align-items: center;
+    z-index: 10;
+    background-color: #121212;
+    top: 50%;
+    left: 50%;
+    transform: translate(-68%, -50%);
+
+    input[type=button] {
+      font-family: $linklato;
+      font-size: 24px;
+      padding: 16px;
+      color: #FFFFFF;
+      background-color: #121212;
+    }
+
+    button[type=submit] {
+      background-color: $linkcolor3;
+
+        i {
+          color: #121212;
+          padding: 22px;
+        }
+    }
+  }
+
+  .str-left {
+    width: 50%;
+    background-color: $linkcolor3;
+    position: relative;
+
+    .left-nav {
+      width: 550px;
+      position: absolute;
+      top: 192px;
+      left: 46px;
+
+      h1, h2 {
+        font-size: 62px;
+        font-family: $linkmerr;
+        padding-bottom: 24px;
+      }
+    }
+    .str-left-content {
+      width: 500px;
+      position: absolute;
+      bottom: 76px;
+      right: 45px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        color: $linkcolor2;
+        font-family: $linklato;
+        text-align: right;
+      }
+    }
+  }
+
+
+  .str-right {
+    width: 50%;
+
+    .str-image{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

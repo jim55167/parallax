@@ -1,0 +1,131 @@
+.content-head {
+  width: 100%;
+  min-height: 100vh;
+
+  .body-left {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+    .left-nav {
+      width: 690px;
+
+      .head-title {
+        color: $linkcolor;
+        font-size: 96px;
+        line-height: 128px;
+        font-family: $linkmerr;
+
+        &.animated-text{
+          opacity: 0;
+          transition: all .8s;
+          transform: translateX(-100px);
+      
+          &.fadeIn {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .head-left-content {
+        width: 570px;
+        padding-top: 48px;
+
+        .head-nav {
+          font-family: $linklato;
+          font-size: 24px;
+          line-height: 36px;
+          color: $linkcolor2;
+          line-height: 1.5;
+
+          &.animated-text{
+            opacity: 0;
+            transition: all .8s;
+            transition-delay: .3s;
+            transform: translateX(-100px);
+        
+            &.fadeIn {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+
+        input[type=button] {
+          border: 1px solid #121212;
+          background-color: #F1F5F6;
+          font-size: 24px;
+          font-family: $linklato;
+          padding: 16px 51px;
+          margin-top: 48px;
+
+          &.animated-text{
+            opacity: 0;
+            transition: all .8s;
+            transition-delay: .6s;
+            transform: translateX(-100px);
+        
+            &.fadeIn {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .head-right {
+    width: 50%;
+    border: 1px solid #121212;
+    position: relative;
+    
+    &.animated{
+      opacity: 0;
+      transition: all .8s;
+      transform: translateX(100px);
+  
+      &.fadeIn {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .head-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .head-right-button {
+      position: absolute;
+      background-color: #FFFFFF;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      button[type=button] {
+        border: 1px solid #121212;
+        border-bottom: inherit;
+        border-top: inherit;
+        border-left: inherit;
+        background-color: #FFFFFF;
+      }
+      .input-icon {
+        padding: 35px;
+      }
+
+    .selected-name {
+      padding-left: 48px;
+      p {
+        font-family: $linkmerr;
+        font-size: 38px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    }
+  }
+}

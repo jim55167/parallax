@@ -1,0 +1,50 @@
+$linkcolor: #000000DE;
+$linkcolor2: #00000099;
+$linkcolor3: #F1F5F6;
+$linklato: 'Lato', sans-serif;
+$linkmerr: 'Merriweather', serif;
+
+#navbar {
+  width: 100%;
+  background-color: #FFFFFF;
+
+}
+.navbar-box {
+  justify-content: center;
+  align-items: center;
+  padding: 24px 48px;
+  border-bottom: 1px solid;
+
+  .navbar-between {
+    width: 100%;
+    justify-content: space-between;
+
+    .logo {
+      width: 112px;
+
+      p>a {
+        font-size: 48px;
+        text-decoration: none;
+        color: $linkcolor;
+        font-style: italic;
+      }
+    }
+
+    .navbar-list {
+      width: 20%;
+      justify-content: space-between;
+      align-items: center;
+
+      li {        
+        font-family: $linklato;
+        font-size: 24px;
+
+        a {
+          text-decoration: none;
+          color: $linkcolor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
