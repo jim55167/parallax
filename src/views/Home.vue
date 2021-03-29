@@ -21,7 +21,6 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'There are many optional plugins and easing functions for achieving advanced effects easily like morphing, scrolling, or animating along a motion path.'
     }
   },
   mounted () {
@@ -34,8 +33,6 @@ export default {
     //   x: (i, target) => this.$scrollTrigger.maxScroll(window) * target.dataset.speed,
     //   ease: 'none'
     // })
-  },
-  methods: {
   },
   components: {
     Navbar,

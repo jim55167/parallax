@@ -38,38 +38,31 @@
 import $ from 'jquery'
 export default {
   mounted () {
-    // this.$gsap.to('.head-right', {
-    //   scrollTrigger: {
-    //     trigger: 'html',
-    //     start: 'top top',
-    //     end: '150px 100px',
-    //     onEnter: () => console.log('enter'),
-    //     onLeave: () => console.log('leave'),
-    //     onEnterBack: () => console.log('enter back'),
-    //     onLeaveBack: () => console.log('all the way back'),
-    //     markers: true,
-    //     toggleActions: 'restart none none none'
-    //   },
-    //   x: -50,
-    //   duration: 1
-    // })
     $(document).ready(function () {
       $(window).scroll(function () {
-        const scrollPos = $(window).scrollTop()
-        const windowHeight = $(window).height()
-
-        $('.animated').each(function () {
-          const thisPos = $(this).offset().top
-          if ((windowHeight + scrollPos) >= thisPos) {
+        setTimeout(function () {
+          $('.head-right').each(function () {
             $(this).addClass('fadeIn')
-          }
-        })
-        $('.animated-text').each(function () {
-          const thisPos = $(this).offset().top
-          if ((windowHeight + scrollPos) >= thisPos) {
+          })
+          $('.left-nav .animated-text').each(function () {
             $(this).addClass('fadeIn')
-          }
+          })
         })
+        // const scrollPos = $(window).scrollTop()
+        // console.log(scrollPos)
+        // const windowHeight = $(window).height()
+        // $('.animated').each(function () {
+        //   const thisPos = $(this).offset().top
+        //   if ((windowHeight + scrollPos) >= thisPos) {
+        //     $(this).addClass('fadeIn')
+        //   }
+        // })
+        // $('.animated-text').each(function () {
+        //   const thisPos = $(this).offset().top
+        //   if ((windowHeight + scrollPos) >= thisPos) {
+        //     $(this).addClass('fadeIn')
+        //   }
+        // })
       })
     })
   }

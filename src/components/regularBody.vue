@@ -7,11 +7,7 @@
       </div>
     </div>
     <div class="collection-box">
-      <img
-        alt="圖四"
-        class="collection-img"
-        src="@/assets/image/p4.jpg"
-        />
+      <div alt="圖四" class="collection-img"></div>
       <div class="collection-text">
         <div>
           <h1>“I like to ride. Fixed gear. No brakes. Can’t stop. Don’t want to, either.”</h1>

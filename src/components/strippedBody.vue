@@ -9,7 +9,7 @@
           </button>
         </div>
       </form>
-      <div class="str-left d-flex">
+      <section class="str-left d-flex">
         <div class="left-nav" id="strip-gsap">
           <h1 class="left-nav-gsap">Stripped-Down</h1>
           <h2 class="left-nav-gsap2">Performance</h2>
@@ -22,26 +22,25 @@
             weighs less than its geared equivalent.
           </p>
         </div>
-      </div>
+      </section>
       <div class="str-right">
-        <div class="str-image"></div>
+        <div class="str-image" ></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   mounted () {
     this.$gsap.to('.left-nav-gsap', {
+      left: '30rem',
+      ease: 'none',
       scrollTrigger: {
-        trigger: '#strip-gsap',
-        start: 'top bottom',
-        end: 'center center',
-        toggleActions: 'restart none none none'
-      },
-      x: -20,
-      duration: 1
+        trigger: '.onebody-title',
+        scrub: true
+      }
     })
     this.$gsap.to('.left-nav-gsap2', {
       scrollTrigger: {
@@ -54,19 +53,12 @@ export default {
       duration: 1
     })
     this.$gsap.to('.str-image', {
+      backgroundPosition: '100px',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.str-right',
-        start: 'top bottom',
-        end: 'center center',
-        onEnter: () => console.log('enter'),
-        onLeave: () => console.log('leave'),
-        onEnterBack: () => console.log('enter back'),
-        onLeaveBack: () => console.log('all the way back'),
-        markers: true,
-        toggleActions: 'restart none none none'
-      },
-      x: -50,
-      duration: 1
+        scrub: true
+      }
     })
   }
 }

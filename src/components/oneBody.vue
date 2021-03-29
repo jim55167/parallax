@@ -9,7 +9,7 @@
           </button>
         </div>
       </form>
-      <div class='onebody-left' id='onebody-left-gsap'>
+      <div class='onebody-left'>
         <div class="onebody-image"></div>
       </div>
       <div class='onebody-right'>
@@ -17,8 +17,8 @@
           <p>A fixed gear drivetrain is more mechanically efficient than any other bicycle drivetrain, with the most direct power transfer from rider to the wheels. Thus, it requires less energy in any given gear to move than a geared bike in the same gear.</p>
         </div>
         <div class='onebody-title'>
-          <h1 id="onebody-title-gsap">One Gear,</h1>
-          <h2 id="onebody-title2-gsap">Many Variations</h2>
+          <h1 class="onebody-title-gsap">One Gear,</h1>
+          <h2 class="onebody-title2-gsap">Many Variations</h2>
         </div>
       </div>
     </div>
@@ -29,34 +29,28 @@
 export default {
   mounted () {
     this.$gsap.to('.onebody-image', {
+      backgroundPosition: '-100px',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.onebody-left',
-        start: 'top bottom',
-        end: 'center center',
-        toggleActions: 'restart none none none'
-      },
-      x: 50,
-      duration: 2
+        scrub: true
+      }
     })
-    this.$gsap.to('#onebody-title-gsap', {
+    this.$gsap.to('.onebody-title-gsap', {
+      left: '30rem',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.onebody-title',
-        start: 'top bottom',
-        end: 'bottom center',
-        toggleActions: 'restart none none none'
-      },
-      x: -20,
-      duration: 1
+        scrub: true
+      }
     })
-    this.$gsap.to('#onebody-title2-gsap', {
+    this.$gsap.to('.onebody-title2-gsap', {
+      right: '-1rem',
+      ease: 'none',
       scrollTrigger: {
         trigger: '.onebody-title',
-        start: 'top bottom',
-        end: 'bottom center',
-        toggleActions: 'restart none none none'
-      },
-      x: 50,
-      duration: 1
+        scrub: true
+      }
     })
   }
 }

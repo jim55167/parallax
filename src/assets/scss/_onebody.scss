@@ -60,15 +60,24 @@
       }
     }
     .onebody-title {
-      width: 570px;
-      position: absolute;
-      bottom: 8rem;
+      // width: 570px;
+      position: relative;
+      top: 45rem;
       right: 5rem;
 
-      h1, h2 {
+      .onebody-title-gsap{
+        position: absolute;
+        bottom: 120px;
+        right: 5rem;
         font-size: 62px;
         font-family: $linkmerr;
-        text-align: right;
+      }
+      .onebody-title2-gsap{
+        position: absolute;
+        bottom: 30px;
+        right: 5rem;
+        font-size: 62px;
+        font-family: $linkmerr;
       }
     }
   }
