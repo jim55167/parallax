@@ -19,21 +19,6 @@ import Randombody from '@/components/randomBody.vue'
 
 export default {
   name: 'Home',
-  data () {
-    return {
-    }
-  },
-  mounted () {
-    // this.$gsap.to('.collection-img', {
-    //   scrollTrigger: {
-    //     trigger: 'html',
-    //     start: 'top center',
-    //     scrub: true
-    //   },
-    //   x: (i, target) => this.$scrollTrigger.maxScroll(window) * target.dataset.speed,
-    //   ease: 'none'
-    // })
-  },
   components: {
     Navbar,
     Singlebody,

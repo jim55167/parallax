@@ -10,10 +10,9 @@ $linkmerr: 'Merriweather', serif;
 
 }
 .navbar-box {
-  justify-content: center;
-  align-items: center;
   padding: 24px 48px;
   border-bottom: 1px solid;
+  // @include flex-center;
 
   .navbar-between {
     width: 100%;

@@ -1,0 +1,17 @@
+// $linkcolor: #000000DE;
+// $linkcolor2: #00000099;
+// $linkcolor3: #F1F5F6;
+// $linklato: 'Lato', sans-serif;
+// $linkmerr: 'Merriweather', serif;
+
+#app{
+  overflow: auto;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.home {
+  max-width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+}

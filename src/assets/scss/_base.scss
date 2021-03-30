@@ -69,6 +69,10 @@ html {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 a, button {
   transition: 0.2s ease-in-out;
 }
@@ -81,18 +85,7 @@ html, body {
   min-height: 100vh;
 }
 
-#app{
-  overflow: auto;
-  position: relative;
-  background-color: #FFFFFF;
-}
-
-.home {
-  max-width: 100%;
-  margin: 0 auto;
-  flex-grow: 1;
-}
-
-.intro{
-  min-height: 100vh;
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
 }

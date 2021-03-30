@@ -49,19 +49,19 @@ export default {
     headScroll
       .fromTo('.head-right',
         { x: '50%', opacity: 0 },
-        { x: '0', opacity: 1, duration: 0.8, delay: 0.8 }
+        { x: '0', opacity: 1, duration: 0.5, delay: 0.8 }
       )
       .fromTo('.head-title',
         { x: '-50%', opacity: 0 },
-        { x: '0', opacity: 1, duration: 0.8, delay: 0.4 }
+        { x: '0', opacity: 1, duration: 0.5, delay: 0.2 }
       )
       .fromTo('.head-nav',
         { x: '-50%', opacity: 0 },
-        { x: '0', opacity: 1, duration: 0.8, delay: 0.4 }
+        { x: '0', opacity: 1, duration: 0.5, delay: 0.2 }
       )
       .fromTo('.head_input',
         { x: '-50%', opacity: 0 },
-        { x: '0%', opacity: 1, duration: 0.8, delay: 0.4 }
+        { x: '0%', opacity: 1, duration: 0.5, delay: 0.2 }
       )
   }
 }

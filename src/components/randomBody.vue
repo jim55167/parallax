@@ -4,7 +4,7 @@
       <div class="footer-box">
         <ul>
           <li>
-            <section>
+            <section class="random1">
               <img class="footer-box-img" src="@/assets/image/p5.jpg" alt="圖五"/>
               <h1 class="footer-title">All who cycle are my friends</h1>
               <p class="footer-date footer-nav">2020.4.27</p>
@@ -16,7 +16,7 @@
             </section>
           </li>
           <li>
-            <section>
+            <section class="random2">
               <img class="footer-box-img" src="@/assets/image/p6.jpg" alt="圖六"/>
               <h1 class="footer-title">Swedish riders and enthusiasts</h1>
               <p class="footer-date footer-nav">2020.3.11</p>
@@ -28,7 +28,7 @@
             </section>
           </li>
           <li>
-            <section>
+            <section class="random3">
               <img class="footer-box-img" src="@/assets/image/p7.jpg" alt="圖七"/>
               <h1 class="footer-title">The Australian fixie culture</h1>
               <p class="footer-date footer-nav">2020.2.29</p>
@@ -63,11 +63,28 @@
 <script>
 export default {
   mounted () {
-
+    const randomList = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: '.footer-body',
+        start: 'top bottom',
+        end: 'center center',
+        toggleActions: 'play none none none'
+        // markers: true
+      }
+    })
+    randomList
+      .fromTo('.random1',
+        { y: '50%', opacity: 0 },
+        { y: '0%', opacity: 1, duration: 0.5, delay: 0.2 }
+      )
+      .fromTo('.random2',
+        { y: '50%', opacity: 0 },
+        { y: '0%', opacity: 1, duration: 0.5, delay: 0.2 }
+      )
+      .fromTo('.random3',
+        { y: '50%', opacity: 0 },
+        { y: '0%', opacity: 1, duration: 0.5, delay: 0.4 }
+      )
   }
 }
 </script>
-
-<style>
-
-</style>
