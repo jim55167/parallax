@@ -9,7 +9,7 @@
   .collection-nav {
     width: 600px;
 
-    h1 {
+    .collection_title {
       font-size: 48px;
       line-height: 64px;
       font-family: $linkmerr;
@@ -18,7 +18,7 @@
       text-align: center;
     }
 
-    p {
+    .collection_text {
       font-size: 16px;
       line-height: 24px;
       font-family: $linklato;

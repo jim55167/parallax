@@ -18,24 +18,21 @@
 <script>
 
 export default {
-  data () {
-    return {
-
-    }
-  },
   mounted () {
-    const tl = this.$gsap.timeline({
+    const navBar = this.$gsap.timeline({
       scrollTrigger: {
-        trigger: '.navbar',
-        scrub: 1,
-        start: 'top'
+        trigger: 'this',
+        start: 'top bottom',
+        end: 'bottom center',
+        toggleActions: 'play none none none'
+        // markers: true
       }
     })
-    tl.to('.navbar-list', {
-      y: -50,
-      ease: 'since.inOut',
-      duration: 2
-    })
+    navBar
+      .fromTo('.navbar-list',
+        { y: '-100%', opacity: 0 },
+        { y: '5%', opacity: 1, duration: 1 }
+      )
   }
 }
 </script>

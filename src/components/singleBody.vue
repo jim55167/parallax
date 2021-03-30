@@ -3,18 +3,18 @@
     <div class="content-head d-flex">
       <div class="body-left d-flex">
         <div class="left-nav">
-          <h1 class="head-title animated-text">Single Speed, Single Life.</h1>
+          <h1 class="head-title">Single Speed, Single Life.</h1>
           <div class="head-left-content">
-            <p class="head-nav animated-text">
+            <p class="head-nav">
               More recently the “fixie” has become a popular alternative among
               mainly urban cyclists, offering the advantage of simplicity
               compared with the standard multi-geared bicycle.
             </p>
-            <input class="animated-text" type="button" value="Shop Now" />
+            <input class="head_input" type="button" value="Shop Now" />
           </div>
         </div>
       </div>
-      <div class="head-right animated">
+      <div class="head-right">
         <img class="head-image" src="@/assets/image/p1.jpg" alt="圖一" />
         <div class="d-flex head-right-button">
           <div class="d-flex">
@@ -35,36 +35,34 @@
 </template>
 
 <script>
-import $ from 'jquery'
+
 export default {
   mounted () {
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        setTimeout(function () {
-          $('.head-right').each(function () {
-            $(this).addClass('fadeIn')
-          })
-          $('.left-nav .animated-text').each(function () {
-            $(this).addClass('fadeIn')
-          })
-        })
-        // const scrollPos = $(window).scrollTop()
-        // console.log(scrollPos)
-        // const windowHeight = $(window).height()
-        // $('.animated').each(function () {
-        //   const thisPos = $(this).offset().top
-        //   if ((windowHeight + scrollPos) >= thisPos) {
-        //     $(this).addClass('fadeIn')
-        //   }
-        // })
-        // $('.animated-text').each(function () {
-        //   const thisPos = $(this).offset().top
-        //   if ((windowHeight + scrollPos) >= thisPos) {
-        //     $(this).addClass('fadeIn')
-        //   }
-        // })
-      })
+    const headScroll = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: 'this',
+        start: 'top bottom',
+        end: 'bottom center',
+        toggleActions: 'play none none none'
+      }
     })
+    headScroll
+      .fromTo('.head-right',
+        { x: '50%', opacity: 0 },
+        { x: '0', opacity: 1, duration: 0.8, delay: 0.8 }
+      )
+      .fromTo('.head-title',
+        { x: '-50%', opacity: 0 },
+        { x: '0', opacity: 1, duration: 0.8, delay: 0.4 }
+      )
+      .fromTo('.head-nav',
+        { x: '-50%', opacity: 0 },
+        { x: '0', opacity: 1, duration: 0.8, delay: 0.4 }
+      )
+      .fromTo('.head_input',
+        { x: '-50%', opacity: 0 },
+        { x: '0%', opacity: 1, duration: 0.8, delay: 0.4 }
+      )
   }
 }
 </script>

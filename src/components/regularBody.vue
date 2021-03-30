@@ -2,8 +2,8 @@
   <div>
     <div class="collection">
       <div class="collection-nav">
-        <h1>A collection built for regular commuters</h1>
-        <p>Riders unknown to each other commonly greet each other when on bikes. As in many subcultures, this feeling of belonging is a key factor in recruiting and retaining participants.</p>
+        <h1 class="collection_title">A collection built for regular commuters</h1>
+        <p class="collection_text">Riders unknown to each other commonly greet each other when on bikes. As in many subcultures, this feeling of belonging is a key factor in recruiting and retaining participants.</p>
       </div>
     </div>
     <div class="collection-box">
@@ -17,3 +17,37 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  mounted () {
+    const timeTitle = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: '.collection-nav',
+        start: 'top bottom',
+        end: 'bottom center',
+        toggleActions: 'play none none none'
+      }
+    })
+    timeTitle
+      .fromTo('.collection_title',
+        { y: '80%', opacity: 0 },
+        { y: '-30%', opacity: 1, duration: 2 }
+      )
+
+    const timeNav = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: '.collection_title',
+        start: 'top bottom',
+        end: 'bottom center',
+        toggleActions: 'play none none none'
+      }
+    })
+    timeNav
+      .fromTo('.collection_text',
+        { y: '100%', opacity: 0 },
+        { y: '-10%', opacity: 1, duration: 2, delay: 0.5 }
+      )
+  }
+}
+</script>
