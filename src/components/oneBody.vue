@@ -37,7 +37,7 @@ export default {
       }
     })
     this.$gsap.to('.onebody-title-gsap', {
-      left: '30rem',
+      right: '5rem',
       ease: 'none',
       scrollTrigger: {
         trigger: '.onebody-title',

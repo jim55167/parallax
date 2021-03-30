@@ -36,12 +36,22 @@
     position: relative;
 
     .left-nav {
-      width: 550px;
-      position: absolute;
-      top: 192px;
-      left: 46px;
+      position: relative;
+      top: 10rem;
+      left: 10rem;
 
-      h1, h2 {
+      .left-nav-gsap {
+        position: absolute;
+        white-space: nowrap;
+        top: 1rem;
+        font-size: 62px;
+        font-family: $linkmerr;
+        padding-bottom: 24px;
+      }
+
+      .left-nav-gsap2 {
+        position: absolute;
+        top: 6rem;
         font-size: 62px;
         font-family: $linkmerr;
         padding-bottom: 24px;

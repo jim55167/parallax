@@ -35,22 +35,20 @@
 export default {
   mounted () {
     this.$gsap.to('.left-nav-gsap', {
-      left: '30rem',
+      left: '5rem',
       ease: 'none',
       scrollTrigger: {
-        trigger: '.onebody-title',
+        trigger: '#strip-gsap',
         scrub: true
       }
     })
     this.$gsap.to('.left-nav-gsap2', {
+      left: '-5rem',
+      ease: 'none',
       scrollTrigger: {
         trigger: '#strip-gsap',
-        start: 'top bottom',
-        end: 'bottom center',
-        toggleActions: 'restart none none none'
-      },
-      x: 20,
-      duration: 1
+        scrub: true
+      }
     })
     this.$gsap.to('.str-image', {
       backgroundPosition: '100px',
