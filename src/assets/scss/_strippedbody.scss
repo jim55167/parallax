@@ -1,13 +1,10 @@
 .str-body {
-  width: 100%;
   height: 100vh;
-  position: relative;
   
   .read-more {
-    position: absolute;
     align-items: center;
     z-index: 10;
-    background-color: #121212;
+    background-color: $color12;
     top: 50%;
     left: 50%;
     transform: translate(-68%, -50%);
@@ -16,15 +13,15 @@
       font-family: $linklato;
       font-size: 24px;
       padding: 16px;
-      color: #FFFFFF;
-      background-color: #121212;
+      color: $colorFF;
+      background-color: $color12;
     }
 
     button[type=submit] {
       background-color: $linkcolor3;
 
         i {
-          color: #121212;
+          color: $color12;
           padding: 22px;
         }
     }
@@ -33,33 +30,41 @@
   .str-left {
     width: 50%;
     background-color: $linkcolor3;
-    position: relative;
 
     .left-nav {
-      position: relative;
       top: 10rem;
       left: 10rem;
+      @include desktop-below {
+        left: 4rem;
+      }
 
       .left-nav-gsap {
-        position: absolute;
         white-space: nowrap;
         top: 1rem;
         font-size: 62px;
         font-family: $linkmerr;
-        padding-bottom: 24px;
+        @include desktop {
+          font-size: 5.5vmin;
+        }
+        @include desktop-below {
+          font-size: 5vmin;
+        }
       }
 
       .left-nav-gsap2 {
-        position: absolute;
-        top: 6rem;
+        top: 8rem;
         font-size: 62px;
         font-family: $linkmerr;
-        padding-bottom: 24px;
+        @include desktop {
+          font-size: 5.5vmin;
+        }
+        @include desktop-below {
+          font-size: 5vmin;
+        }
       }
     }
     .str-left-content {
-      width: 500px;
-      position: absolute;
+      width: 80%;
       bottom: 76px;
       right: 45px;
 
@@ -68,21 +73,19 @@
         line-height: 24px;
         color: $linkcolor2;
         font-family: $linklato;
-        text-align: right;
+        @include desktop-below {
+          font-size: 14px;
+        }
       }
     }
   }
-
 
   .str-right {
     width: 50%;
 
     .str-image{
       background-image: url('~@/assets/image/p3.jpg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
+      @include bg-fixed;
       width: 100%;
       height: 100%;
     }

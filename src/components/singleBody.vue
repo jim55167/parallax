@@ -3,7 +3,8 @@
     <div class="content-head d-flex">
       <div class="body-left d-flex">
         <div class="left-nav">
-          <h1 class="head-title">Single Speed, Single Life.</h1>
+          <h1 class="title_style">Single Speed,</h1>
+          <h1 class="title_style">Single Life.</h1>
           <div class="head-left-content">
             <p class="head-nav">
               More recently the “fixie” has become a popular alternative among
@@ -14,9 +15,9 @@
           </div>
         </div>
       </div>
-      <div class="head-right">
+      <div class="head-right position-relative">
         <img class="head-image" src="@/assets/image/p1.jpg" alt="圖一" />
-        <div class="d-flex head-right-button">
+        <div class="d-flex head-right-button position-absolute">
           <div class="d-flex">
             <button type="button">
               <i class="fa-2x fas fa-chevron-left input-icon"></i>

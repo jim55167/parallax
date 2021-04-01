@@ -1,41 +1,71 @@
 .content-head {
   width: 100%;
   min-height: 100vh;
+  @include desktop-top {
+    flex-wrap: wrap;
+  }
 
   .body-left {
     width: 50%;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
+    @include desktop-top {
+      width: 100%;
+      order: 2;
+    }
 
     .left-nav {
-      width: 690px;
+      width: 90%;
+      @include desktop-top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 24px;
+      }
 
-      .head-title {
+      .title_style {
         color: $linkcolor;
-        font-size: 96px;
-        line-height: 128px;
         font-family: $linkmerr;
+        font-size: 9vmin;
+        line-height: 128px;
+        @include desktop {
+          font-size: 7vmin;
+        }
+        @include desktop-top {
+          line-height: 100px;
+          margin: 0 auto;
+        }
       }
 
       .head-left-content {
-        width: 570px;
+        width: 85%;
         padding-top: 48px;
+        @include desktop-top {
+          width: 100%;
+          padding: initial;
+          display: flex;
+          flex-direction: column;
+        }
 
         .head-nav {
           font-family: $linklato;
-          font-size: 24px;
-          line-height: 36px;
           color: $linkcolor2;
-          line-height: 1.5;
+          font-size: 2.8vmin;
+          line-height: 36px;
+          @include desktop {
+            font-size: 2vmin;
+          }
         }
 
         input[type=button] {
-          border: 1px solid #121212;
+          border: 1px solid $color12;
           background-color: #F1F5F6;
           font-size: 24px;
           font-family: $linklato;
           padding: 16px 51px;
           margin-top: 48px;
+          @include desktop-top {
+            margin-top: 24px;
+          }
         }
       }
     }
@@ -43,8 +73,11 @@
 
   .head-right {
     width: 50%;
-    border: 1px solid #121212;
-    position: relative;
+    border: 1px solid $color12;
+    @include desktop-top {
+      order: 1;
+      width: 100%;
+    }
 
     .head-image {
       width: 100%;
@@ -54,30 +87,35 @@
     }
 
     .head-right-button {
-      position: absolute;
-      background-color: #FFFFFF;
+      background-color: $colorFF;
       left: 0;
       right: 0;
       bottom: 0;
 
       button[type=button] {
-        border: 1px solid #121212;
+        border: 1px solid $color12;
         border-bottom: inherit;
         border-top: inherit;
         border-left: inherit;
-        background-color: #FFFFFF;
+        background-color: $colorFF;
       }
       .input-icon {
         padding: 35px;
+        @include desktop-top {
+          padding: 20px;
+        }
       }
 
     .selected-name {
-      padding-left: 48px;
+      width: 100%;
       p {
         font-family: $linkmerr;
+        margin: 0 auto;
         font-size: 38px;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
+        @include desktop-below {
+          font-size: 30px;
+        }
       }
     }
     }

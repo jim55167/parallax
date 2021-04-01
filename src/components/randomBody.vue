@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="footer-body">
+    <div class="footer-body d-flex">
       <div class="footer-box">
-        <ul>
+        <ul class="d-flex">
           <li>
             <section class="random1">
               <img class="footer-box-img" src="@/assets/image/p5.jpg" alt="圖五"/>
@@ -11,7 +11,7 @@
               <nav class="footer-nav">
                 A rider from Stockholm interviewed for an article about the
                 phenomenon notes that riding a bike imparts a feeling of freedom
-                to the rider…
+                to the rider Das Bremsen…
               </nav>
             </section>
           </li>
@@ -23,7 +23,7 @@
               <nav class="footer-nav">
                 There are also several bicycle clubs throughout Sweden with a
                 fixed-gear niche. Komet Club Rouler is a club based in Gothenburg,
-                annually arranging Svart Kat…
+                annually arranging…
               </nav>
             </section>
           </li>
@@ -42,11 +42,11 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom d-flex">
       <div class="footer-bottom-color">
-        <div class="footer-bottom-box">
-          <div class="footer-bottom-nav">
-            <ul>
+        <div class="footer-bottom-box d-flex">
+          <div class="footer-bottom-nav d-flex">
+            <ul class="d-flex">
               <li><a href="#">Product</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Contact</a></li>

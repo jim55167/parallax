@@ -1,10 +1,8 @@
 .collection {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: $colorFF;
   height: 416px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
   .collection-nav {
     width: 600px;
@@ -31,19 +29,19 @@
   position: relative;
 
   .collection-img {
+    @include bg-fixed;
     background-image: url('~@/assets/image/p4.jpg');
     background-position: 50% 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     height: 640px;
     width: 100%;
+    @include desktop {
+      height: 540px;
+    }
   }
 
   .collection-text {
     width: 450px;
-    background-color: #FFFFFF;
-    position: absolute;
+    background-color: $colorFF;
     left: 155px;
     bottom: 77px;
 
@@ -53,6 +51,9 @@
       font-family: $linkmerr;
       color: $linkcolor;
       padding: 16px;
+      @include desktop {
+        font-size: 20px;
+      }
     }
 
     i {

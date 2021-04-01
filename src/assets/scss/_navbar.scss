@@ -1,22 +1,17 @@
-$linkcolor: #000000DE;
-$linkcolor2: #00000099;
-$linkcolor3: #F1F5F6;
-$linklato: 'Lato', sans-serif;
-$linkmerr: 'Merriweather', serif;
 
 #navbar {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: $colorFF;
 
 }
 .navbar-box {
   padding: 24px 48px;
   border-bottom: 1px solid;
-  // @include flex-center;
+  @include flex-center;
 
   .navbar-between {
     width: 100%;
-    justify-content: space-between;
+    @include flex-between;
 
     .logo {
       width: 112px;
@@ -31,8 +26,13 @@ $linkmerr: 'Merriweather', serif;
 
     .navbar-list {
       width: 20%;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-between;
+      @include desktop-below {
+        width: 30%;
+      }
+      @include desktop-top {
+        width: 40%;
+      }
 
       li {        
         font-family: $linklato;

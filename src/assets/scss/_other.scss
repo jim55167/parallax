@@ -1,17 +1,24 @@
-// $linkcolor: #000000DE;
-// $linkcolor2: #00000099;
-// $linkcolor3: #F1F5F6;
-// $linklato: 'Lato', sans-serif;
-// $linkmerr: 'Merriweather', serif;
+$linkcolor: #000000DE;
+$linkcolor2: #00000099;
+$linkcolor3: #F1F5F6;
+$colorFF: #FFFFFF;
+$color12: #121212;
+$linklato: 'Lato', sans-serif;
+$linkmerr: 'Merriweather', serif;
+
 
 #app{
-  overflow: auto;
+  overflow: hidden;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: $colorFF;
 }
 
 .home {
   max-width: 100%;
   margin: 0 auto;
   flex-grow: 1;
+}
+
+.container {
+  padding: initial;
 }

@@ -1,10 +1,8 @@
 .onebody {
   width: 100%;
   min-height: 100vh;
-  position: relative;
 
   .read-more {
-    position: absolute;
     align-items: center;
     z-index: 1;
     background-color: $linkcolor3;
@@ -19,10 +17,10 @@
     }
 
     button[type=submit] {
-      background-color: #121212;
+      background-color: $color12;
 
         i {
-          color: #FFFFFF;
+          color: $colorFF;
           padding: 22px;
         }
     }
@@ -32,11 +30,8 @@
     width: 50%;
 
     .onebody-image {
+      @include bg-fixed;
       background-image: url('~@/assets/image/p2.jpg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
       width: 100%;
       height: 100%;
     }
@@ -45,12 +40,11 @@
   .onebody-right {
     width: 50%;
     background-color: $linkcolor3;
-    position: relative;
 
     .onebody-nav {
-      width: 73%;
+      width: 80%;
       padding-top: 96px;
-      padding-left: 135px;
+      margin: 0 auto;
 
       p {
         color: $linkcolor2;
@@ -60,23 +54,34 @@
       }
     }
     .onebody-title {
-      position: relative;
-      top: 45rem;
-      right: 5rem;
-
-      .onebody-title-gsap{
-        position: absolute;
-        bottom: 120px;
-        right: 5rem;
-        font-size: 62px;
-        font-family: $linkmerr;
+      right: 8rem;
+      bottom: -50rem;
+      justify-content: flex-end;
+      @include desktop-below {
+        right: 3rem;
       }
-      .onebody-title2-gsap{
-        position: absolute;
-        bottom: 30px;
-        right: 5rem;
-        font-size: 62px;
+
+      .title-gsap{
+        bottom: 180px;
+        font-size: 6.5vmin;
         font-family: $linkmerr;
+        @include desktop {
+          font-size: 5.5vmin;
+        }
+        @include desktop-below {
+          font-size: 5vmin;
+        }
+      }
+      .title2-gsap{
+        bottom: 80px;
+        font-size: 6.5vmin;
+        font-family: $linkmerr;
+        @include desktop {
+          font-size: 5.5vmin;
+        }
+        @include desktop-below {
+          font-size: 5vmin;
+        }
       }
     }
   }

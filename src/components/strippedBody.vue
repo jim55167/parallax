@@ -1,20 +1,20 @@
 <template>
   <div>
-    <div class="str-body d-flex">
+    <div class="str-body d-flex position-relative">
       <form action="#">
-        <div class="read-more d-flex">
+        <div class="read-more d-flex position-absolute">
           <input type="button" value="Read More">
           <button type="submit" class="d-flex">
             <i class="fas fa-arrow-right"></i>
           </button>
         </div>
       </form>
-      <section class="str-left d-flex">
-        <div class="left-nav" id="strip-gsap">
-          <h1 class="left-nav-gsap">Stripped-Down</h1>
-          <h2 class="left-nav-gsap2">Performance</h2>
+      <section class="str-left d-flex position-relative">
+        <div class="left-nav position-relative" id="strip-gsap">
+          <h1 class="left-nav-gsap position-absolute">Stripped-Down</h1>
+          <h2 class="left-nav-gsap2 position-absolute">Performance</h2>
         </div>
-        <div class="str-left-content">
+        <div class="str-left-content position-absolute">
           <p>
             Without the added parts required for a fully geared drive
             train—derailleurs, shifters, cables, cable carriers, multiple chain
