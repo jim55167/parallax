@@ -22,6 +22,9 @@
       .footer-box-img {
         @include bg-center;
         height: 600px;
+        @include desktop-top {
+          height: 45vh;
+        }
       }
 
       .footer-title {

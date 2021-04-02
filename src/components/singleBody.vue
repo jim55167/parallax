@@ -52,7 +52,7 @@ export default {
         { x: '50%', opacity: 0 },
         { x: '0', opacity: 1, duration: 0.5, delay: 0.8 }
       )
-      .fromTo('.head-title',
+      .fromTo('.title_style',
         { x: '-50%', opacity: 0 },
         { x: '0', opacity: 1, duration: 0.5, delay: 0.2 }
       )

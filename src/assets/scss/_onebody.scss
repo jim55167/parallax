@@ -1,6 +1,9 @@
 .onebody {
   width: 100%;
   min-height: 100vh;
+  @include desktop-top {
+    flex-wrap: wrap;
+  }
 
   .read-more {
     align-items: center;
@@ -9,6 +12,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-68%, -50%);
+    @include desktop-top {
+      transform: translate(-50%, -50%);
+    }
     
     input[type=button] {
       font-family: $linklato;
@@ -28,6 +34,10 @@
 
   .onebody-left {
     width: 50%;
+    @include desktop-top {
+      order: 1;
+      width: 100%;
+    }
 
     .onebody-image {
       @include bg-fixed;
@@ -40,17 +50,31 @@
   .onebody-right {
     width: 50%;
     background-color: $linkcolor3;
+    @include desktop-top {
+      order: 2;
+      width: 100%;
+    }
 
     .onebody-nav {
       width: 80%;
       padding-top: 96px;
       margin: 0 auto;
+      @include desktop-top {
+        width: 100%;
+        position: absolute;
+        bottom: 7vmin;
+        padding: inherit;
+      }
 
       p {
         color: $linkcolor2;
         font-family: $linklato;
         font-size: 16px;
         line-height: 24px;
+        @include desktop-top {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
     .onebody-title {
@@ -58,7 +82,12 @@
       bottom: -50rem;
       justify-content: flex-end;
       @include desktop-below {
+        top: 20rem;
         right: 3rem;
+      }
+      @include desktop-top {
+        top: 20rem;
+        right: 13rem;
       }
 
       .title-gsap{
