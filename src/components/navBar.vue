@@ -1,15 +1,18 @@
 <template>
     <div id="navbar">
       <div class="d-flex navbar-box">
-        <div class="row d-flex navbar-between">
+        <div class="row d-flex navbar-flow position-relative">
           <div class="logo">
             <p><a href="#">Fixie</a></p>
           </div>
-            <ul class="d-flex navbar-list">
-              <li><a href="#">Product</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
+            <ul class="navbar-list" :class="{'inverse': showMenu}">
+              <li class="active"><a href="#">Product</a></li>
+              <li class="active"><a href="#">Blog</a></li>
+              <li class="active"><a href="#">Contact</a></li>
             </ul>
+          <template>
+            <span class="icon" @click="toggleMenu"><img alt="menu" src="~@/assets/image/hamburger.png"></span>
+          </template>
         </div>
       </div>
     </div>
@@ -18,6 +21,16 @@
 <script>
 
 export default {
+  data () {
+    return {
+      showMenu: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.showMenu = !this.showMenu
+    }
+  },
   mounted () {
     const navBar = this.$gsap.timeline({
       scrollTrigger: {

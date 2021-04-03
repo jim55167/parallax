@@ -25,6 +25,12 @@
         @include desktop-top {
           height: 45vh;
         }
+        @include pad-top {
+          height: 35vh;
+        }
+        @include mobile480 {
+          height: 30vh;
+        }
       }
 
       .footer-title {
@@ -33,6 +39,12 @@
         color: $linkcolor;
         font-style: italic;
         padding: 24px 0 16px;
+        @include pad-top {
+          font-size: 20px;
+        }
+        @include mobile480 {
+          font-size: 14px;
+        }
       }
 
       .footer-date {
@@ -47,6 +59,16 @@
         @include desktop-below {
           font-size: 14px;
         }
+        @include iphone {
+          font-size: 12px;
+        }
+        @include mobile480 {
+          overflow: hidden;
+          text-overflow:ellipsis;
+          display:-webkit-box; 
+          -webkit-box-orient:vertical;
+          -webkit-line-clamp:6; 
+        }
       }
     }
     }
@@ -54,7 +76,8 @@
 }
 .footer-bottom {
   width: 100%;
-  justify-content: center;
+  position: relative;
+  @include flex-center;
 
   .footer-bottom-color {
     background-color: $linkcolor3;
@@ -62,6 +85,9 @@
 
     .footer-bottom-box {
       padding: 24px 48px;
+      @include pad-top {
+        padding: 24px;
+      }
 
       .footer-bottom-nav {
         width: 100%;
@@ -70,6 +96,9 @@
         ul {
           width: 250px;
           @include flex-between;
+          @include mobile480 {
+            width: 160px;
+          }
 
           li>a {
             color: $linkcolor;
@@ -81,13 +110,26 @@
           font-size: 14px;
           font-family: $linklato;
           color: $linkcolor2;
+          @include pad-top {
+            position: absolute;
+            bottom: 10px;
+            left: 30vmin;
+          }
+          @include mobile480 {
+            display: none;
+          }
         }
 
-        tfoot {
+        tfoot > a {
           height: 48px;
           width: 112px;
           font-size: 48px;
           font-style: oblique;
+          text-decoration: none;
+          color: $linkcolor;
+          @include pad-top {
+            font-size: 32px;
+          }
         }
       }
     }

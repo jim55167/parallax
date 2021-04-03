@@ -116,6 +116,12 @@
         @include desktop-below {
           font-size: 30px;
         }
+        @include mobile480 {
+          font-size: 24px;
+        }
+        @include mobile414 {
+          font-size: 20px;
+        }
       }
     }
     }

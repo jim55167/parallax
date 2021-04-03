@@ -52,7 +52,7 @@
               <li><a href="#">Contact</a></li>
             </ul>
             <p>&copy;2020 Fixie. All Rights Reserved.</p>
-            <tfoot>Fixie</tfoot>
+            <tfoot><a href="#">Fixie</a></tfoot>
           </div>
         </div>
       </div>

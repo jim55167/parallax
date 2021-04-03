@@ -52,6 +52,15 @@
         top: 5rem;
         left: 15rem;
       }
+      @include iphone {
+        left: 10rem;
+      }
+      @include mobile480 {
+        left: 8rem;
+      }
+      @include mobile414 {
+        left: 6rem;
+      }
 
       .left-nav-gsap {
         white-space: nowrap;

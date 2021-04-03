@@ -75,6 +75,9 @@
           width: 80%;
           margin: 0 auto;
         }
+        @include pad-top {
+          font-size: 14px;
+        }
       }
     }
     .onebody-title {
@@ -88,6 +91,12 @@
       @include desktop-top {
         top: 20rem;
         right: 13rem;
+      }
+      @include iphone {
+        right: 9rem;
+      }
+      @include mobile414 {
+        right: 7rem;
       }
 
       .title-gsap{

@@ -14,14 +14,24 @@
       color: $linkcolor;
       padding-bottom: 24px;
       text-align: center;
+      @include iphone {
+        font-size: 36px;
+      }
+      @include mobile414 {
+        font-size: 28px;
+      }
     }
 
-    .collection_text {
+    .collection_p {
       font-size: 16px;
       line-height: 24px;
       font-family: $linklato;
       color: $linkcolor2;
       text-align: center;
+      @include pad-top {
+        margin: 0 auto;
+        width: 90%;
+      }
     }
   }
 }
@@ -37,6 +47,9 @@
     @include desktop {
       height: 540px;
     }
+    @include mobile480 {
+      height: 480px;
+    }
   }
 
   .collection-text {
@@ -44,6 +57,14 @@
     background-color: $colorFF;
     left: 155px;
     bottom: 77px;
+    @include pad-top {
+      width: 60%;
+      left: 20px;
+    }
+    @include mobile480 {
+      width: 90%;
+      bottom: 3vmin;
+    }
 
     h1 {
       font-size: 24px;
@@ -53,6 +74,9 @@
       padding: 16px;
       @include desktop {
         font-size: 20px;
+      }
+      @include pad-top {
+        font-size: 16px;
       }
     }
 
@@ -64,6 +88,9 @@
       padding-bottom: 16px;
       display: inline-block;
       font-style: oblique;
+      @include pad-top {
+        font-size: 14px;
+      }
     }
   }
 }

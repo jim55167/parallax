@@ -5,16 +5,19 @@
 
 }
 .navbar-box {
-  padding: 24px 48px;
   border-bottom: 1px solid;
   @include flex-center;
+  
 
-  .navbar-between {
+  .navbar-flow {
     width: 100%;
-    @include flex-between;
+    flex-flow: nowrap;
 
     .logo {
-      width: 112px;
+      padding: 24px 48px;
+      @include desktop-top {
+        padding: 24px;
+      }
 
       p>a {
         font-size: 48px;
@@ -25,25 +28,56 @@
     }
 
     .navbar-list {
-      width: 20%;
-      @include flex-between;
-      @include desktop-below {
-        width: 30%;
-      }
-      @include desktop-top {
-        width: 40%;
+      width: 100%;
+      display: flex;
+      @include flex-end;
+      @include pad-top {
+        max-height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        top: 85px;
+        transition: .6s;
+        z-index: 10;
+        display: block;
+        background-color: $linkcolor3;        
+        &.inverse {
+          max-height: 500px;
+        }
       }
 
-      li {        
+      .active {        
         font-family: $linklato;
         font-size: 24px;
-
+        padding: 24px;
+        @include pad-top {
+          height: 50px;
+          align-items: center;
+          border-top: 1px solid $linkcolor2;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+          &.active:hover {
+            background-color: $colorFF;
+          }
+        }
         a {
           text-decoration: none;
           color: $linkcolor;
           cursor: pointer;
         }
       }
+    }
+  }
+
+  .icon {
+    display: none;
+    cursor: pointer;
+    @include pad-top {
+      width: 100%;
+      padding-right: 24px;
+      display: flex;
+      @include flex-end;
     }
   }
 }

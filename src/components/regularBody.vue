@@ -3,7 +3,7 @@
     <div class="collection d-flex">
       <div class="collection-nav">
         <h1 class="collection_title">A collection built for regular commuters</h1>
-        <p class="collection_text">Riders unknown to each other commonly greet each other when on bikes. As in many subcultures, this feeling of belonging is a key factor in recruiting and retaining participants.</p>
+        <p class="collection_p">Riders unknown to each other commonly greet each other when on bikes. As in many subcultures, this feeling of belonging is a key factor in recruiting and retaining participants.</p>
       </div>
     </div>
     <div class="collection-box">

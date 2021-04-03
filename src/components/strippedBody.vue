@@ -51,7 +51,7 @@ export default {
       }
     })
     this.$gsap.to('.str-image', {
-      backgroundPosition: '100px',
+      backgroundPosition: '-100px',
       ease: 'none',
       scrollTrigger: {
         trigger: '.str-right',
