@@ -32,21 +32,11 @@ export default {
     timeTitle
       .fromTo('.collection_title',
         { y: '80%', opacity: 0 },
-        { y: '-30%', opacity: 1, duration: 2 }
+        { y: '-30%', opacity: 1, duration: 1 }
       )
-
-    const timeNav = this.$gsap.timeline({
-      scrollTrigger: {
-        trigger: '.collection_title',
-        start: 'top bottom',
-        end: 'bottom center',
-        toggleActions: 'play none none none'
-      }
-    })
-    timeNav
-      .fromTo('.collection_text',
+      .fromTo('.collection_p',
         { y: '100%', opacity: 0 },
-        { y: '-10%', opacity: 1, duration: 2, delay: 0.5 }
+        { y: '-10%', opacity: 1, duration: 1, delay: 0.2 }
       )
   }
 }
